@@ -1,0 +1,36 @@
+.color-theme-1{
+    color: #161616 !important;
+} 
+.color-theme-1-bg{
+    background-color: #161616 !important;
+}
+.color-theme-2{
+    color: #f2a900 !important;
+    caret-color: #f2a900 !important;
+}
+.color-theme-2-bg{
+    background-color: #f2a900 !important;
+}
+.color-theme-3{
+    color: #adadad !important;
+    caret-color: #adadad !important;
+}
+.color-theme-3-bg{
+    background-color: #adadad !important;
+}
+.color-theme-3-br {
+    border-color: rgb(173, 173, 173, 0.12) !important;
+}
+.color-theme-4{
+    color: #ffffff !important;
+    caret-color: #ffffff !important;
+}
+.color-theme-4-bg{
+    background-color: #ffffff !important;
+}
+.color-theme-4-br{
+    border-color: rgb(255, 255, 255, 0.7) !important;
+}
+.color-theme-5-bg {
+    background-color: #fafafa !important;
+}
