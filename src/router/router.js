@@ -6,6 +6,10 @@ import contact from '@/components/pages/contact'
 import photos from '@/components/pages/photos'
 import offres from '@/components/pages/offres'
 
+import cgv from '@/components/pages/cgv'
+import mentionsLegales from '@/components/pages/mentionsLegales'
+import partenariats from '@/components/pages/partenariats'
+
 Vue.use(Router)
 
 const router = new Router({
@@ -29,6 +33,21 @@ const router = new Router({
       path: '/offres',
       name: 'offres',
       component: offres
+    },
+    {
+      path: '/mentionsLegales',
+      name: 'mentionsLegales',
+      component: mentionsLegales
+    },
+    {
+      path: '/partenariats',
+      name: 'partenariats',
+      component: partenariats
+    },
+    {
+      path: '/cgv',
+      name: 'cgv',
+      component: cgv
     }
   ]
 })
