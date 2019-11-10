@@ -24,7 +24,7 @@
     </v-container>
     <v-container>
       <v-row align="center" justify="center">
-        <v-col class="col-xs-11 col-sm-9 col-md-2 col-lg-3 text-justify">
+        <v-col class="col-xs-11 col-sm-9 col-md-9 col-lg-8 text-justify">
           <v-card flat tile class="py-10 px-5">
             <p>
               Le site&nbsp;<a href="https://www.specter.com/"
