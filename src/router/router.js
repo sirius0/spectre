@@ -1,14 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import home from '@/components/pages/home'
-import contact from '@/components/pages/contact'
-import photos from '@/components/pages/photos'
-import offres from '@/components/pages/offres'
+import home from '@/components/pagesFront/home'
+import contact from '@/components/pagesFront/contact'
+import photos from '@/components/pagesFront/photos'
+import offres from '@/components/pagesFront/offres'
 
-import cgv from '@/components/pages/cgv'
-import mentionsLegales from '@/components/pages/mentionsLegales'
-import partenariats from '@/components/pages/partenariats'
+import cgv from '@/components/pagesFront/cgv'
+import mentionsLegales from '@/components/pagesFront/mentionsLegales'
+import partenariats from '@/components/pagesFront/partenariats'
+
+import signup from '@/components/pagesFront/signup'
+import signin from '@/components/pagesFront/signin'
 
 Vue.use(Router)
 
@@ -48,6 +51,16 @@ const router = new Router({
       path: '/cgv',
       name: 'cgv',
       component: cgv
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: signup
+    },
+    {
+      path: '/signin',
+      name: 'signin',
+      component: signin
     }
   ]
 })
