@@ -63,13 +63,11 @@ export default {
       var emailStored = localStorage.getItem('email')
       var sessionIDStored = localStorage.getItem('sessionID')
 
-      this.axios.post('http://192.168.1.20:3000/api/getmessage', {
+      this.axios.post('/api/getmessage', {
         username: emailStored,
         sessionID: sessionIDStored
       }).then((response) => {
         this.messagesJSON = response.data
-      }, (error) => {
-        console.log(error)
       })
     }
   }

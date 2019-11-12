@@ -120,7 +120,7 @@ export default {
     async submit () {
       this.axios({
         method: 'post',
-        url: this.url + 'http://192.168.1.20:3000/api/signup',
+        url: this.url + '/api/signup',
         data: {
           username: this.username,
           password: this.password,
@@ -134,8 +134,6 @@ export default {
         .then((response) => {
           this.alert = true
           this.$router.push('signin')
-        }, (error) => {
-          console.log(error)
         })
     }
   }

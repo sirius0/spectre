@@ -78,4 +78,31 @@ const router = new Router({
   ]
 })
 
+router.beforeEach((to, from, next) => {
+  // access to component instance via `vm`
+  if (to.fullPath === '/signin' || to.fullPath === '/signup') {
+    if (localStorage.getItem('email') !== null) {
+      next(
+        { name: 'profil' }
+      )
+    } else {
+      next()
+    }
+  } else if (to.fullPath === '/profil') {
+    if (localStorage.getItem('email') === null) {
+      next({ name: 'SignIn' })
+    } else {
+      next()
+    }
+  } else if (to.fullPath === '/message') {
+    if (localStorage.getItem('email') === null) {
+      next({ name: 'SignIn' })
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+})
+
 export default router

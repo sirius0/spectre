@@ -86,7 +86,7 @@ export default {
       var that = this
       this.axios({
         method: 'post',
-        url: this.url + 'http://192.168.1.20:3000/api/login',
+        url: this.url + '/api/login',
         data: {
           email: this.email,
           password: this.password,
@@ -102,9 +102,6 @@ export default {
             sessionStorage.clear()
             that.$router.push('profil')
           }
-        })
-        .catch(function (erreur) {
-          console.log(erreur)
         })
     }
   }

@@ -120,7 +120,6 @@
   </v-container>
 </template>
 
-
 <script>
 export default {
   data () {
@@ -165,7 +164,7 @@ export default {
       // connecter l'utilisateur
       this.axios({
         method: 'post',
-        url: this.url + 'http://192.168.1.20:3000/api/getprofilinfos',
+        url: this.url + '/api/getprofilinfos',
         data: {
           username: emailStored,
           sessionID: sessionIDStored
@@ -186,10 +185,8 @@ export default {
             that.superuser = response.data.superuser
             if (response.data.superuser && response.data.superuser === 'true') {
               that.validMessage = true
-              console.log('true ok ici')
             } else {
               that.validMessage = false
-              console.log('false ok ici')
             }
           }
         })
@@ -203,7 +200,7 @@ export default {
       var that = this
       this.axios({
         method: 'post',
-        url: this.url + 'http://192.168.1.20:3000/api/updateProfile',
+        url: this.url + '/api/updateProfile',
         data: {
           sessionID: sessionIDStored,
           username: this.username,
@@ -225,7 +222,7 @@ export default {
       var that = this
       this.axios({
         method: 'post',
-        url: this.url + 'http://192.168.1.20:3000/api/deleteProfile',
+        url: this.url + '/api/deleteProfile',
         data: {
           sessionID: sessionIDStored,
           username: this.username
@@ -242,7 +239,7 @@ export default {
       var sessionIDStored = localStorage.getItem('sessionID')
       this.axios({
         method: 'post',
-        url: this.url + 'http://192.168.1.20:3000/api/logout',
+        url: this.url + '/api/logout',
         data: {
           username: emailStored,
           sessionID: sessionIDStored

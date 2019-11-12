@@ -141,12 +141,11 @@ export default {
     },
     async sendMessage () {
       var that = this
-      console.log(that.sendButton)
       that.sendButton = 'C\'est envoyer'
 
       this.axios({
         method: 'post',
-        url: this.url + 'http://192.168.1.20:3000/api/sendmessage',
+        url: this.url + '/api/sendmessage',
         data: {
           name: this.name,
           email: this.email,
@@ -155,7 +154,6 @@ export default {
         }
       })
         .catch(function (erreur) {
-          console.log(erreur)
         })
       this.reset()
     }

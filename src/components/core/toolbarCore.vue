@@ -98,7 +98,7 @@ export default {
       var emailStored = localStorage.getItem('email')
       this.axios({
         method: 'post',
-        url: this.url + 'http://192.168.1.20:3000/api/logout',
+        url: this.url + '/api/logout',
         data: {
           username: emailStored
         }
