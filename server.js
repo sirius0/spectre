@@ -27,8 +27,6 @@ let authentifiedUser = []
 
 // LOGIN // DONE
 app.post('/api/login', (req, res) => {
-  console.log('/api/login | req.body : ', req.body)
-  console.log('/api/login | req.body.sessionID : ', req.body.sessionID)
   let usersFile = JSON.parse(fs.readFileSync('./src/data/users.json', 'utf8'))
   if (req.body) {
     // if requete a un body
@@ -69,7 +67,6 @@ app.post('/api/login', (req, res) => {
 
 // LOGOUT // DONE
 app.post('/api/logout', (req, res) => {
-  console.log('logout', req.body)
   const user = authentifiedUser.find(
     u => u.username === req.body.username)
 
@@ -111,7 +108,6 @@ app.post('/api/signup', (req, res) => {
     })
     fs.writeFile('./src/data/users.json', JSON.stringify(usersFile, null, 2), function (err) {
       if (err) throw err
-      console.log('users.json updated!')
     })
     res.status(200)
     res.json({
@@ -130,9 +126,6 @@ app.post('/api/signup', (req, res) => {
 
 // GET PROFILE INFOS // DONE
 app.post('/api/getprofilinfos', (req, res) => {
-  console.log('/api/getprofilinfos | req.body : ', req.body)
-  console.log('/api/getprofilinfos | authentifiedUser : ', authentifiedUser)
-  console.log('/api/getprofilinfos | req.body.sessionID : ', req.body.sessionID)
   const user = authentifiedUser.find(
     u => u.username === req.body.username && u.sessionID === req.body.sessionID)
   let usersFile = JSON.parse(fs.readFileSync('./src/data/users.json', 'utf8'))
@@ -148,7 +141,6 @@ app.post('/api/getprofilinfos', (req, res) => {
     // const user = usersFile.find(u => u.username === req.body.email)
     const userInfo = usersFile.find(
       u => u.username === user.username)
-    console.log(userInfo)
     res.json({
       status: 200,
       username: userInfo.username,
@@ -192,7 +184,6 @@ app.post('/api/updateProfile', (req, res) => {
     }
     fs.writeFile('./src/data/users.json', JSON.stringify(usersFile, null, 2), function (err) {
       if (err) throw err
-      console.log('users.json updated !')
     })
     res.json({
       status: 200,
@@ -248,7 +239,6 @@ app.post('/api/sendmessage', function (req, res) {
   // ecriture dans un fichier start
   fs.writeFile('./src/data/mail.json', JSON.stringify(mails, null, 2), function (err) {
     if (err) throw err
-    console.log('Saved!')
   })
   // ecriture dans un fichier end
 
@@ -284,7 +274,6 @@ app.post('/api/getmessage', function (req, res) {
     if (superUserFlag && user) {
       let mails = JSON.parse(fs.readFileSync('./src/data/mail.json', 'utf8'))
       res.json(mails)
-      console.log('data envoyée !')
       res.status(200)
     } else {
       res.json({
@@ -297,8 +286,6 @@ app.post('/api/getmessage', function (req, res) {
 
 // Debug
 app.get('/api/test', function (req, res) {
-  console.log('req.body', req.body)
-  console.log('req.query', req.query)
   // console.log('req.session.userId', req)
   res.json({
     message: 'get ok',
@@ -307,9 +294,6 @@ app.get('/api/test', function (req, res) {
 })
 
 app.post('/api/test', function (req, res) {
-  console.log('req.body', req.body)
-  console.log('req.query', req.query)
-  console.log('req.query', req.body.sessionID)
   res.json({
     message: 'post 1 ok ',
     status: 200
@@ -317,9 +301,6 @@ app.post('/api/test', function (req, res) {
 })
 
 app.post('/api/test2', function (req, res) {
-  console.log('req.body', req.body)
-  console.log('req.query', req.query)
-  console.log('req.query', req.body.sessionID)
   res.json({
     message: 'post 2 ok ',
     status: 200
