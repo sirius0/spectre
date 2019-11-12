@@ -1,4 +1,21 @@
-# specter
+# Specter hacking escape game
+
+## Étudiants:
+Habibou SECK <br/>
+Hicham EL HADDARI
+
+## Rapport:
+[Lien](REPORT.pdf)
+
+### Screenshot big screens
+![Screenshot](capture/captured_laptop.gif)
+
+### Screenshot small screens
+![Screenshot](capture/captured_ipad.gif)
+
+<br/>
+----------------------------------------------
+<br/>
 
 ## Project setup
 ```
