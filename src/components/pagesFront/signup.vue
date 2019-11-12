@@ -87,6 +87,7 @@
 <script>
 
 export default {
+  name: 'signup',
   data () {
     return {
       url: '', // 'http://localhost:3000',

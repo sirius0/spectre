@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Edward Snowden",
+    "email": "snowden@specter.com",
+    "status": "Autre",
+    "content": "One of the things that is lost in all the problematic politics of the Russian government is the fact this is one of the most beautiful countries in the world. The people are friendly. The people are warm"
+  },
+  {
+    "name": "charles Aznavour",
+    "email": "aznavour@prod.fr",
+    "status": "Professionnel",
+    "content": "Je t’aime comme on aime le soleil, sans elle le monde ne sera que froid glaciale, tu es la femme qui rend ton monde plus beau, avec ton amour tous mes rêve se réalise, soleil de ma vie je t’aime sans toi ce monde n’est pas le mien."
+  },
+  {
+    "name": "Dalida",
+    "email": "Dalida@prod.fr",
+    "status": "Professionnel",
+    "content": "Je t’aime comme on aime le soleil, sans elle le monde ne sera que froid glaciale, tu es la femme qui rend ton monde plus beau, avec ton amour tous mes rêve se réalise, soleil de ma vie je t’aime sans toi ce monde n’est pas le mien."
+  }
+]

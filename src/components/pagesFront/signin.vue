@@ -57,6 +57,7 @@
 
 <script>
 export default {
+  name: 'signin',
   data () {
     return {
       url: '', // 'http://localhost:3000',

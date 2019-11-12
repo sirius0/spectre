@@ -13,6 +13,9 @@ import partenariats from '@/components/pagesFront/partenariats'
 import signup from '@/components/pagesFront/signup'
 import signin from '@/components/pagesFront/signin'
 
+import profil from '@/components/pagesBack/profil'
+import message from '@/components/pagesBack/message'
+
 Vue.use(Router)
 
 const router = new Router({
@@ -61,6 +64,16 @@ const router = new Router({
       path: '/signin',
       name: 'signin',
       component: signin
+    },
+    {
+      path: '/profil',
+      name: 'profil',
+      component: profil
+    },
+    {
+      path: '/message',
+      name: 'message',
+      component: message
     }
   ]
 })
