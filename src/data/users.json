@@ -1,0 +1,21 @@
+[
+  {
+    "username": "admin@specter.fr",
+    "password": "specter",
+    "firstname": "SuperBouffon",
+    "lastname": "ChefBouffon",
+    "country": "France",
+    "city": "Paris",
+    "zipcode": "75013",
+    "superuser": "true"
+  },
+  {
+    "username": "user@esiea.fr",
+    "password": "specter",
+    "firstname": "admin1",
+    "lastname": "admin1",
+    "country": "maroc",
+    "city": "Paris",
+    "zipcode": "75020"
+  }
+]
